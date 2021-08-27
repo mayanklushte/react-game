@@ -9,7 +9,7 @@ const History = ({history, moveTo, currentMove}) => {
                         <button
                             style={{
                                 fontWeight: move === currentMove ? 'bold' : 'normal',
-                                color: move === currentMove ? 'red': 'black'
+                                color: move === currentMove ? '#ffa31a': 'black'
                             }}
                             type='submit'
                             onClick={() => {

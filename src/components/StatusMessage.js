@@ -7,9 +7,20 @@ const StatusMessage = ({ winner, current }) => {
 
     return (
         <h2>
-            {winner && `Winner is ${winner}`}
-            {!winner && !noMoveLeft && `Next Player Is ${current.isXNext ? 'X' : 'O'}`}
-            {!winner && noMoveLeft && `X And O Tied`}
+            {winner &&
+                (<>
+                Winner is {' '}
+                <span style={{color:winner  === 'X'  ? '#ffa31a': '#33cc33'}}>{winner}</span>
+                </>)}
+            
+            {!winner && !noMoveLeft && (<>
+                Next Player Is{' '}
+                <span style={{color:current.isXNext  ? '#ffa31a': '#33cc33'}}>{current.isXNext ? 'X' : 'O'}</span>
+                </>)}
+            {!winner && noMoveLeft && (<>
+                
+                <span style={{color: '#ffa31a'}}>X</span> {' '} And {' '} <span style={{color: '#33cc33'}}>O</span>Tied
+                </>)}
         </h2>
     )
 }

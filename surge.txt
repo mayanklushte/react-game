@@ -1,0 +1,14 @@
+to build/prepare to deploy the game:
+    npm run build
+
+To install Surge:
+    npm install --global Surge
+
+you have to first authorise yourself:
+    surge login
+    {required}
+        email:
+        password:
+
+to deploy:
+    surge <folder name>
